@@ -23,11 +23,15 @@
         color="white"
       ></v-app-bar-nav-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
-      <v-toolbar-title class="ma-2">{{ appTitle }}</v-toolbar-title>
-      <v-btn flat class="hidden-sm-and-down ma-2">Menu</v-btn>
+      <router-link to="/">
+        <v-toolbar-title class="ma-2">{{ appTitle }}</v-toolbar-title>
+      </router-link>
+      <v-btn flat class="hidden-sm-and-down ma-2" to="/menu">Menu</v-btn>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
-      <v-btn flat class="hidden-sm-and-down ma-2">SIGN IN</v-btn>
-      <v-btn color="grey lighten-3" class="hidden-sm-and-down ma-2">JOIN</v-btn>
+      <v-btn flat class="hidden-sm-and-down ma-2" to="/sign-in">SIGN IN</v-btn>
+      <v-btn color="grey lighten-3" class="hidden-sm-and-down ma-2" to="/join"
+        >JOIN</v-btn
+      >
     </v-toolbar>
   </span>
 </template>
@@ -45,4 +49,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+</style>
