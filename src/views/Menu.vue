@@ -1,14 +1,18 @@
 <template>
-  <v-container fluid>
-    <v-layout>
-      <h1>Menu Page</h1>
-    </v-layout>
-  </v-container>
+  <span>
+    <home-meal-plans></home-meal-plans>
+    <meal-recipes></meal-recipes>
+  </span>
 </template>
-
 <script>
+import HomeMealPlans from "@/components/HomeMealPlans.vue";
+import MealRecipes from "@/components/MealRecipes.vue";
 export default {
-  name: "Menu"
+  name: "Menu",
+  components: {
+    HomeMealPlans,
+    MealRecipes
+  }
 };
 </script>
 
